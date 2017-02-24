@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var minhaView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func ocultarView(_ sender: Any) {
+        UIView.beginAnimations(nil, context: nil)
+        minhaView.alpha = 0
+        UIView.commitAnimations()
+    }
+    
+    @IBAction func exibirView(_ sender: Any) {
+        UIView.beginAnimations(nil, context: nil)
+        minhaView.alpha = 1
+        UIView.commitAnimations()
+    }
 
 }
 
